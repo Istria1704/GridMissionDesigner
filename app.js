@@ -1,14 +1,9 @@
 // Initialize drone model dropdown
 const droneSelect = document.getElementById('droneModel');
-Object.keys(droneModels).forEach(model => {
-    const option = document.createElement('option');
-    option.value = model;
-    option.textContent = model;
-    droneSelect.appendChild(option);
-});
 
 // Function to calculate minimum altitude based on minimum GSD
 function calculateMinimumAltitude(drone) {
+    if (!isDataLoaded || !droneModels[drone]) return 30; // Default minimum altitude
     const minGSD = 0.5; // minimum GSD in cm/px
     return calculateAltitude(minGSD, drone);
 }
@@ -16,6 +11,8 @@ function calculateMinimumAltitude(drone) {
 // Function to update altitude limits
 function updateAltitudeLimits() {
     const drone = document.getElementById('droneModel').value;
+    if (!isDataLoaded || !droneModels[drone]) return;
+    
     const minAltitude = Math.ceil(calculateMinimumAltitude(drone));
     
     altitudeSlider.min = minAltitude;
@@ -96,7 +93,7 @@ function updateAltitudeFromGSD() {
     const gsd = parseFloat(document.getElementById('gsd').value);
     const drone = document.getElementById('droneModel').value;
     
-    if (gsd && drone) {
+    if (gsd && drone && isDataLoaded && droneModels[drone]) {
         const altitude = calculateAltitude(gsd, drone);
         isUpdatingGSD = true; // Prevent recursive updates
         altitudeSlider.value = Math.round(altitude);
@@ -110,7 +107,7 @@ function updateGSDFromAltitude() {
     const altitude = parseFloat(altitudeSlider.value);
     const drone = document.getElementById('droneModel').value;
     
-    if (altitude && drone) {
+    if (altitude && drone && isDataLoaded && droneModels[drone]) {
         const gsd = calculateGSD(altitude, drone);
         const gsdSlider = document.getElementById('gsd');
         const gsdInput = document.getElementById('gsdValue');
@@ -134,7 +131,4 @@ droneSelect.addEventListener('change', () => {
 });
 
 // Add event listener for export
-document.getElementById('exportMission').addEventListener('click', exportMission);
-
-// Initial calculation
-updateAltitudeFromGSD(); 
+document.getElementById('exportMission').addEventListener('click', exportMission); 
