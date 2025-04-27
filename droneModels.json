@@ -1,0 +1,62 @@
+{
+    "Mavic 2 Pro": {
+        "camera": {
+            "sensorWidth": 13.2,
+            "sensorHeight": 8.8,
+            "focalLength": 10.26,
+            "imageWidth": 5472,
+            "imageHeight": 3648,
+            "name": "Hasselblad L1D-20c"
+        }
+    },
+    "Mavic 2 Zoom": {
+        "camera": {
+            "sensorWidth": 6.3,
+            "sensorHeight": 4.7,
+            "focalLength": 4.5,
+            "imageWidth": 4000,
+            "imageHeight": 3000,
+            "name": "1/2.3\" CMOS"
+        }
+    },
+    "Mavic Air 2": {
+        "camera": {
+            "sensorWidth": 6.4,
+            "sensorHeight": 4.8,
+            "focalLength": 4.5,
+            "imageWidth": 8000,
+            "imageHeight": 6000,
+            "name": "1/2\" CMOS"
+        }
+    },
+    "Air 2S": {
+        "camera": {
+            "sensorWidth": 13.2,
+            "sensorHeight": 8.8,
+            "focalLength": 8.4,
+            "imageWidth": 5472,
+            "imageHeight": 3648,
+            "name": "1\" CMOS"
+        }
+    },
+    "Mavic 3": {
+        "camera": {
+            "sensorWidth": 17.3,
+            "sensorHeight": 13,
+            "focalLength": 12.8,
+            "imageWidth": 5280,
+            "imageHeight": 3956,
+            "name": "4/3 CMOS Hasselblad"
+        }
+    },
+    "Mini 4 Pro": {
+        "camera": {
+            "sensorWidth": 9.8,
+            "sensorHeight": 7.3,
+            "focalLength": 8.4,
+            "imageWidth": 8064,
+            "imageHeight": 6048,
+            "name": "1/1.3\" CMOS"
+        }
+    }
+} 
