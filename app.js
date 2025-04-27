@@ -112,8 +112,8 @@ function updateGSDFromAltitude() {
         const gsdSlider = document.getElementById('gsd');
         const gsdInput = document.getElementById('gsdValue');
         
-        // Round GSD to 1 decimal place
-        const roundedGSD = Math.round(gsd * 10) / 10;
+        // Round GSD to 2 decimal places
+        const roundedGSD = Math.round(gsd * 40) / 40;
         
         // Only update if within slider range
         if (roundedGSD >= gsdSlider.min && roundedGSD <= gsdSlider.max) {

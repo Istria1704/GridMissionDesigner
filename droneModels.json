@@ -58,5 +58,25 @@
             "imageHeight": 6048,
             "name": "1/1.3\" CMOS"
         }
+    },
+    "Air 3S Wide": {
+        "camera": {
+            "sensorWidth": 13.2,
+            "sensorHeight": 8.8,
+            "focalLength": 8.4,
+            "imageWidth": 8192,
+            "imageHeight": 6144,
+            "name": "1\" CMOS Wide"
+        }
+    },
+    "Air 3S Tele": {
+        "camera": {
+            "sensorWidth": 9.8,
+            "sensorHeight": 7.3,
+            "focalLength": 24.5,
+            "imageWidth": 8064,
+            "imageHeight": 6048,
+            "name": "1/1.3\" CMOS Tele"
+        }
     }
 } 
