@@ -111,7 +111,7 @@ function exportMission() {
     // Add mission waypoints with hover and photo actions
     waypoints.forEach(row => {
         row.forEach(point => {
-            csvContent.push(`${point.lat};${point.lng};${altitude};${heading};0.2;0;0;${cameraTilt};5;${cameraTilt};1;${hoverTime};-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;1;${waypointSpeed.toFixed(1)};0;0;0;0;-1;-1`);
+            csvContent.push(`${point.lat};${point.lng};${altitude};${heading};0.2;0;0;${cameraTilt};0;${hoverTime*1000};1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;-1;0;1;${waypointSpeed.toFixed(1)};0;0;0;0;-1;-1`);
         });
     });
     
