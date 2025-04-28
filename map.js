@@ -248,8 +248,8 @@ function calculatePhotoFootprint(center, heading, altitude, drone) {
         [-width/2, height/2]
     ];
     
-    // Rotate corners based on heading
-    const rad = (heading - 90) * Math.PI / 180;
+    // Rotate corners based on heading (negative for clockwise rotation)
+    const rad = (-heading + 90) * Math.PI / 180;
     const rotatedCorners = corners.map(([x, y]) => [
         x * Math.cos(rad) - y * Math.sin(rad),
         x * Math.sin(rad) + y * Math.cos(rad)

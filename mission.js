@@ -11,8 +11,8 @@ function calculateGridWaypoints(polygon, heading, frontOverlap, sideOverlap, alt
     // Calculate distance between photos based on front overlap
     const photoSpacing = footprint.height * (1 - frontOverlap / 100);
     
-    // Convert heading to radians
-    const headingRad = (heading - 90) * Math.PI / 180;
+    // Convert heading to radians (negative for clockwise rotation)
+    const headingRad = (-heading + 90) * Math.PI / 180;
     
     // Get bounds of the polygon
     const bounds = L.latLngBounds(polygonPoints);
